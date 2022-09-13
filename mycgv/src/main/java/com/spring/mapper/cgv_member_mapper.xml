@@ -1,1 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+	    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+	<mapper namespace="mapper.member">
+	
+	<!-- member join -->
+	<insert id="join" parameterType="com.mycgv.vo.CgvMemberVO">
+		insert into cgv_member values(#{id},#{pass},#{name},#{gender}
+		,#{email},#{zonecode},#{addr1},#{addr2},#{hp},#{pnumber},#{hobbylist},#{intro},sysdate)
+	</insert>
+</mapper>	

@@ -162,10 +162,7 @@ public class CgvMemberDAO  {
 	 * insert : 회원가입 
 	 */
 	public int insert(CgvMemberVO vo) {
-		int result = 0;
-		
 		//sqlSession 객체의 메소드를 호출하여 실행결과를 가져옴.
-		result = sqlSession.insert("mapper.member.join", vo);
-		return result;
+		return sqlSession.insert("mapper.member.join", vo);
 	}
 }

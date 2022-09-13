@@ -2,10 +2,15 @@ package com.spring.service;
 
 import java.util.ArrayList;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.mycgv.dao.CgvMemberDAO;
 import com.mycgv.vo.CgvMemberVO;
 
 public class MemberServiceImpl implements MemberService{
+	
+	@Autowired
+	private CgvMemberDAO dao;
 	
 	/**
 	 * 회원 상세 정보
@@ -44,7 +49,7 @@ public class MemberServiceImpl implements MemberService{
 	 */
 	@Override
 	public int getJoinResult(CgvMemberVO vo) {	
-		CgvMemberDAO dao = new CgvMemberDAO();
+		//CgvMemberDAO dao = new CgvMemberDAO();
 		int result = dao.insert(vo);		
 		return result;
 	}
