@@ -21,6 +21,7 @@
 		<section class="adminMain">
 			<article><a href="admin_notice_list.do">공지사항 관리</a></article>
 			<article><a href="admin_member_list.do">회원 관리</a></article>
+			<article><a href="admin_movie_list.do">영화 관리</a></article>
 		</section>
 	</div>
 	
@@ -29,7 +30,6 @@
 	
 </body>
 </html>
-
 
 
 

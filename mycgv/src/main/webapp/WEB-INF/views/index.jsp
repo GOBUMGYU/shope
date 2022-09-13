@@ -13,14 +13,6 @@
 		alert("로그인에 성공하셨습니다.");
 	}
 </script>
-<script src="http://localhost:9000/mycgv/resources/js/jquery-3.6.0.min.js"></script>
-<script src="http://localhost:9000/mycgv/resources/js/mycgv_index.js"></script>
-<style>
-	.notice_list li span{
-		display:inline-block;
-		padding:0 8px; 
-	}
-</style>
 </head>
 <body>
 	<!-- Header Include -->
@@ -71,7 +63,24 @@
 				<div>
 					<img src="http://localhost:9000/mycgv/resources/images/16390080561620.png">
 				</div>
-				<!-- Ajax + Dynamic HTML 로 생성된 공지사항 출력위치 -->
+				<ul>
+					<li>
+						<span>SUITE CINEMA</span>
+						<span>#호텔 컨셉의 프리미엄관</span>	
+					</li>
+					<li>
+						<span>CINE & LIVINGROOM</span>
+						<span>#신개념 소셜 상영관</span>	
+					</li>
+					<li>
+						<span>4DX</span>
+						<span>#모션시트 #오감체험</span>	
+					</li>
+					<li>
+						<span>CINE de CHEF</span>
+						<span>#쉐프가 있는 영화관</span>	
+					</li>
+				</ul>
 			</div>
 		</section>
 		
@@ -165,3 +174,10 @@
 	
 </body>
 </html>
+
+
+
+
+
+
+

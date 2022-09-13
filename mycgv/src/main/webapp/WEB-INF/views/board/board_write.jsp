@@ -20,7 +20,7 @@
 	<div class="content">
 		<h1>게시판-글쓰기</h1>
 		<form name="boardWriteForm" action="board_write_check.do" 
-		method="post" enctype="multipart/form-data">
+							enctype="multipart/form-data" method="post">
 			<ul>
 				<li>
 					<label>제목</label>

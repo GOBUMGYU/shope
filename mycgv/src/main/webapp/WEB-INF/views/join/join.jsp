@@ -20,7 +20,7 @@
 			}else{
 				//중복체크 진행 : AJAX 호출 및 결과 출력
 				$.ajax({
-					url:"id_check.do?id="+$("#id").val(),
+					url:"idCheckController.jsp?id="+$("#id").val(),
 					success:function(result){
 						//alert("result===>>" + result);
 						if(result == 1){

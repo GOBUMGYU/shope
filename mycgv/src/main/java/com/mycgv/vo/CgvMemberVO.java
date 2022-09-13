@@ -8,11 +8,9 @@ public class CgvMemberVO {
 			addr1, addr2, hp, pnum1, pnum2, pnum3, intro,mdate;
 	String[] hobby;
 	
-	
 	//DB ¿¬µ¿½Ã
 	String email, pnumber, hobbylist;
 
-	
 		
 	public String getMdate() {
 		return mdate;
@@ -159,7 +157,7 @@ public class CgvMemberVO {
 	}
 
 	public String getPnumber() {
-		if(pnumber == null) {	
+		if(pnumber == null) {
 			return pnum1+"-"+pnum2+"-"+pnum3;
 		}else {
 			return pnumber; 

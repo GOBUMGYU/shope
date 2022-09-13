@@ -2,9 +2,17 @@ package com.mycgv.dao;
 
 import java.util.ArrayList;
 
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
 import com.mycgv.vo.CgvMemberVO;
 
-public class CgvMemberDAO extends DBConn{
+@Repository
+public class CgvMemberDAO  {
+	
+	@Autowired
+	private SqlSessionTemplate sqlSession;
 	/**
 	 * totalCount : 전체 로우수 출력
 	 */
@@ -155,32 +163,9 @@ public class CgvMemberDAO extends DBConn{
 	 */
 	public int insert(CgvMemberVO vo) {
 		int result = 0;
-		String sql = "insert into cgv_member "
-				+ " values(?,?,?,?,?,?,?,?,?,?,?,?,sysdate)";
 		
-		try {
-			getPreparedStatement(sql);
-			pstmt.setString(1, vo.getId());
-			pstmt.setString(2, vo.getPass());
-			pstmt.setString(3, vo.getName());
-			pstmt.setString(4, vo.getGender());
-			pstmt.setString(5, vo.getEmail());
-			pstmt.setString(6, vo.getZonecode());
-			pstmt.setString(7, vo.getAddr1());
-			pstmt.setString(8, vo.getAddr2());
-			pstmt.setString(9, vo.getHp());
-			pstmt.setString(10, vo.getPnumber());
-			pstmt.setString(11, vo.getHobbylist());
-			pstmt.setString(12, vo.getIntro());
-			
-			result = pstmt.executeUpdate();
-			
-			close();
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
+		//sqlSession 객체의 메소드를 호출하여 실행결과를 가져옴.
+		result = sqlSession.insert("mapper.member.join", vo);
 		return result;
 	}
 }

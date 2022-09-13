@@ -33,17 +33,16 @@
 			<tr>				
 				<th>내용</th>
 				<td colspan="3">${vo.bcontent }<br><br>
-				<c:if test="${vo.bsfile != null}">
-					<!-- upload 폴더의 파일경로를 추가 -->
-					<img src="http://localhost:9000/mycgv/resources/upload/${vo.bsfile}"
-					width="200" height="130">				
+				<c:if test="${vo.bsfile != null }">
+					<img src="http://localhost:9000/mycgv/resources/upload/${vo.bsfile }"
+						width="50%">
 				</c:if>
-				<br><br><br></td>
+				<br><br></td>
 			</tr>
 			<tr>
 				<td colspan="4">
-					<a href="board_update.do?bid=${vo.bid}"><button type="button" class="btn_style">수정하기</button></a>
-					<a href="board_delete.do?bid=${vo.bid}"><button type="button" class="btn_style">삭제하기</button></a>
+					<a href="board_update.do?bid=${vo.bid }"><button type="button" class="btn_style">수정하기</button></a>
+					<a href="board_delete.do?bid=${vo.bid }"><button type="button" class="btn_style">삭제하기</button></a>
 					<a href="board_list.do">
 						<button type="button" class="btn_style">리스트</button>
 					</a>

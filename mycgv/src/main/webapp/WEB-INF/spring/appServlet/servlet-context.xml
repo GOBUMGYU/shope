@@ -25,12 +25,20 @@
 	</beans:bean>
 	
 	<!-- multipartResolver -->
-	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></beans:bean> 
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	</beans:bean> 
+	
+	<!-- serive 객체 생성 -->
+	<beans:bean id="memberService"  class="com.spring.service.MemberServiceImpl"></beans:bean>
+	<beans:bean id="boardService"  class="com.spring.service.BoardServiceImpl"></beans:bean>
+	<beans:bean id="noticeService"  class="com.spring.service.NoticeServiceImpl"></beans:bean>
+	<beans:bean id="movieService"  class="com.spring.service.MovieServiceImpl"></beans:bean>
+	<beans:bean id="pageService"  class="com.spring.service.PageServiceImpl"></beans:bean>
+	<beans:bean id="fileService"  class="com.spring.service.FileServiceImpl"></beans:bean>
 	
 	
 	<context:component-scan base-package="com.spring.mycgv" />
 	<context:component-scan base-package="com.spring.controller" />
-	
-	
+		
 	
 </beans:beans>

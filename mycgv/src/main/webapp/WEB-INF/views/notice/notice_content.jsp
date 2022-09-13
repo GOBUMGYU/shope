@@ -30,11 +30,7 @@
 			</tr>
 			<tr>				
 				<th>내용</th>
-				<td colspan="3">탑건 재밌어요~ ^^<br><br>
-				<c:if test="${vo.nsfile != null}">
-					<img src="http://localhost:9000/mycgv/resources/upload/${vo.nsfile}" width="100" height="70">
-				</c:if>
-				<br><br></td>
+				<td colspan="3">탑건 재밌어요~ ^^<br><br><br><br></td>
 			</tr>
 			<tr>
 				<td colspan="4">					
